@@ -1,0 +1,97 @@
+#include - load prebuilt libraries
+
+for loading user defined libs?
+
+iostream :
+	library refer to a family of "class templates" and supporting functions in the C++ standard library that implements 'stream based input/output capabilities'. 
+	It is an object oriented alternative to C's FILE-based streams from the C std library.
+
+
+templates:(wikipedia)
+	a feature of C++ programming language that allows functions and classes to operate with "generic" types. This allows a func or class to work on different data types without being rewritten for each one.
+	The C++ standard library provides useful functions within a framework of connected templates.
+	
+	Since C++11, templates may be either variadic (can take variable no. of argument) or non variadic, in earlier version of C++ they are always non-variadic.
+
+	Types(3):
+		Function templates:
+			it behaves like a func except that the template can have arguments of many different types.
+			The format for declaring function templates with type parameters is:
+
+				template<class identifier> declaration;		OR
+				template<typename identifier> declaration;
+
+			Both expression have same meaning and behave exactly same way. The latter was introduced to avoid confusion, since a type parameter need not be a class? until C++20.(It can be a basic type such as int or double) 
+
+			Example:
+				C++ standard library contains the function template max(x , y) could look like this:	
+					template<typename T> T max (T &a, T &b) {return a>b ? a:b;}
+
+					This single function definition works with all data types for which > operator is defined.
+
+			Use of template saves lines in source code, also limit changes to one function description? , making the code easier to read.
+			
+			A template does not produce small object code. 
+			If a program uses both the int and double version of the max() (from above example), the compiler will create a number of object code version according to the given types of arguments. The compiler output  will be similar for  a source code containing two separate non templated version of max(), for both types.
+
+			Usage:
+				std:cout << max(3,7) << '\n';
+				std::cout << max(3.0,7.0) << '\n';
+					the template argument 'T' will automatically deduced by the compiler to be int and double.
+
+				std::cout << max<double>(3, 7.0)
+					automatic deduction would fail as the types of the parameters must match the template arguments exactly. Thus in the example it is explicitly instantiated to double is provided.
+
+
+		
+		Class tempaltes:
+			provides a specification for generating classes based on parameters. They are generally used to implement containers. It is instantiated by giving a set of types as it's arg.
+					
+
+		Variable templates:
+			ex:
+				template<typename T> constexpr T pi = T{3.141592653589793238462643383L}; // (Almost) from std::numbers::pi.
+
+Generic Programming:
+	is a styple of comp programming in which type are used in to-be-specified-later way and then instantiated when neded for specific types provided as parameters.
+	
+
+
+main():(Stackoverflow)
+
+
+Comments:
+	// - single line.
+	/* lorem ipsum */ - multi-line comments.
+
+	nesting is not allowes while commenting.
+
+Errors and warnings:(3)
+
+	1.Compiler Time errors: rules set by compiler is not properly followed. 
+	2.Runtime errors: successful compilation but shows error while ecexution.
+	3.Warnings:
+
+Staments and Functions:
+	Statements is a basic unit of computattion in a C++ program, ends with a semicolon.
+
+	Function is a block of organized, reusable code that is used to perform a single, related action.
+
+	*code: ref1.cpp
+
+Input Output:
+
+	streams				 	purpose
+	
+	std::cout 				printing data to the console.
+	std::cin 				reading data from the terminal.space as delimiter.
+	std::cerr 				printing errors to the console.
+	std::clog				printing log messages to the console.
+	std::getline(istream, variable)		reading data from a stream ignoring withspaces and storing the data in a variable. 
+	
+	Reading data with spaces:
+		*code: ref2.cpp
+
+C++ program execution model & memory model:
+	
+	
