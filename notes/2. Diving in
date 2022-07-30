@@ -93,5 +93,32 @@ Input Output:
 		*code: ref2.cpp
 
 C++ program execution model & memory model:
+	Core features: 
+		defines how a cpp program should look like.
+
+	Standard library:
+		collection of classes and functions, generally written in the core language and the part of the C++ ISO Standard.
+		It provides several generic containers, functions to use and manipulate these containers, functions objects, generic strings and streams (interactive and file I/O).
+		c++ stdlib incorporates most headers of the ISO c stdlib , ending with '.h', any than those no other headers in the library have such extensions.
+		Features of C++ stdlib are declared within the std namespace.
+		The C++ stdlib is based upon conventions introduced by the STL and influenced by research in generic programming.
+
+	Standard Template Library(STL):
+		is a software library originally designed for the C++ programming language.
+		It provides four components called algorithms, containers, functions abd iterators.
+		Also provides a set of common classes for C++, that are compatible with elementary operations (such as copying and assignment).
+		STL algorithms are independent of containers, reduces complexity.
+		It achive it's results through the use of templates, which provides "compile-time polymorphism" , often more efficient than traditional "run-time polymorphism".
+		STL was the first library of generic algorithms and data structures for C++.
+
+
+*** The STL and C++ stdlib are two distinct entities.
+
+Subroutine:
+	is a sequence of program instructions that perform a specific task.	
 	
+Namespaces:(wikipedia)
+	is a set of signs(names), used to identify and refer to objects of various kinds. It ensures that all of a given set of objects have unique name so that they can be easily identified.
+	In hierarchical file systems, each directory is a separate namespace, that may contain file with exact name.
+	In computer programming, they are used of grouping symbols and identifiers around a particular functionality, and to avoid name collision.
 	
