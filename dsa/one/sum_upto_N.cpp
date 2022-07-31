@@ -1,5 +1,6 @@
 /*	Using artithmatic progression,
- *		Sn = n/2 ( a + l)
+ *		Sn = n/2 ( 2a + (n-1)d) or n/2 { a + (a + (n-1)d}
+ *		Sn = n/2 (a + l)
 */
 #include<iostream>
 using std::cout,std::cin;
