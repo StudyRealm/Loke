@@ -1,13 +1,14 @@
 #include<iostream>
-using std::cin,std::cout;
+using std::cin;
+using std::cout;
 
-int rev_int(int x){
+int rev_int(int num){
 	int ans=0;
-	while(x!=0){
-		ans = (ans*10) + (x%10);	//Parsing out last int from the given int - x%10;
+	while(num!=0){
+		ans = (ans*10) + (num%10);	//Parsing out last int from the given int - num%10;
 						//adding it to 'ans' by incrementing it;s prev value
 						//by multiple of 10s.
-		x /=10;
+		num /=10;
 	}
 	return ans;
 }

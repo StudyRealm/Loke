@@ -12,10 +12,11 @@ using std::cin;
 
 //Function to change any base to deci
 
-int basetodeci(int num, int base){
+int basetodeci(int num, int base)
+{
 	int ans=0;
-	for(int i=0; num!=0 ;i++){
-		ans = ans + (num%10 * pow(base,i));
+	for(int idx=0; num!=0 ;idx++){
+		ans = ans + (num%10 * pow(base,idx));
 		num /= 10;		// removing tha last digit after computing 
 
 	}
@@ -24,22 +25,25 @@ int basetodeci(int num, int base){
 
 ///Function to change deci to any base
 
-int decitobase(int num, int base){
+int decitobase(int num, int base)
+{
 	int ans=0;				//storing the reminder with correct int place
-	for(int i=0; num!=0 ;i++){
-		ans = ans +  (pow(10,i) * (num%base));
+	for(int idx=0; num!=0 ;idx++){
+		ans = ans +  (pow(10,idx) * (num%base));
 		num /= base;
 	}
 	return ans;
 }
 
 
-int basetobase(int num, int basen, int basem){
+int basetobase(int num, int basen, int basem)
+{
 	return decitobase(basetodeci(num,basen),basem);
 }
 
 
-int main(){
+int main()
+{
 	int num, base1,base2;
 	cin >> num >> base1 >> base2;
 

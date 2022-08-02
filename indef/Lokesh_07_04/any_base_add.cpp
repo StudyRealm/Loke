@@ -65,7 +65,7 @@ using std::cout;
 
 int baseadd(int num1, int num2, int base){
 	int inc=0,sum=0;
-	for(int i=0 ; (num1 > 0 || num2 > 0 || inc > 0); i++){
+	for(int idx=0 ; (num1 > 0 || num2 > 0 || inc > 0); idx++){
 		int tempsum =(num1%10) + (num2%10) + inc;      //adding digits with corresponding inc
 		inc = tempsum/base; 			       // Quotient			
 		sum += tempsum%base*pow(10,i);		       // Reminder

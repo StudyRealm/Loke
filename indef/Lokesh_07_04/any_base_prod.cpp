@@ -20,10 +20,11 @@ using std::cout;
 
 int baseadd(int num1, int num2, int base){
 	int inc=0,sum=0;
-	for(int i=0 ; (num1 > 0 || num2 > 0 || inc > 0); i++){
+	for(int idx=0 ; (num1 > 0 || num2 > 0 || inc > 0); idx++)
+	{
 		int tempsum =(num1%10) + (num2%10) + inc;      //adding digits with corresponding inc
 		inc = tempsum/base; 			      // Quotient			
-		sum += (tempsum%base)*pow(10,i);	      // Adding Reminder top sum
+		sum += (tempsum%base)*pow(10,idx);	      // Adding Reminder top sum
 		num1 /= 10;						
 		num2 /= 10;
 	}
@@ -32,15 +33,16 @@ int baseadd(int num1, int num2, int base){
 
 //Function to multiple two numbers of given base
 
-int baseprod(int num1, int num2, int base){
+int baseprod(int num1, int num2, int base)
+{
 	int temp_prod1=num1*(num2%10) ,temp_prod2; //First multiplication is done in temp_prod1.
 	num2 /= 10;
 
-	for(int i=1; num2!=0; i++){
+	for(int idx=1; num2!=0; idx++)
+	{
 		temp_prod2 = num1*(num2 %10);
 		num2 /= 10;
-		temp_prod1 = baseadd(temp_prod1,temp_prod2*pow(10,i),base); // Adding the two products
-									    
+		temp_prod1 = baseadd(temp_prod1,temp_prod2*pow(10,idx),base); // Adding the two products
 	}
 
 	return temp_prod1;
@@ -52,5 +54,4 @@ int main(){
 	cin >> num1 >> num2 >> base;
 
 	cout << baseprod(num1,num2,base);
-
 }

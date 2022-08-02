@@ -2,12 +2,12 @@
 
 int main()
 {
-	int a;
-	std::cin >> a;
+	int num;
+	std::cin >> num;
 
-	for (int i=2; i< int(a/2) ; i++)
+	for (int idx=2; idx< int(num/2) ; idx++)
 	{
-		if (a%i == 0)
+		if (num%idx == 0)
 		{
 			std::cout << "Is not a prime\n";
 			return 0;

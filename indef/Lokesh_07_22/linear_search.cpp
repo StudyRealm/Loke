@@ -4,6 +4,7 @@
  *	OUTPUT = index	
 */
 #include<iostream>
+
 int main()
 {
 	//INPUT
@@ -15,17 +16,21 @@ int main()
 					//for size variable
 
 	for(int i=0; i<size;i++){	//enter elements of array
+
 		std::cin >> arr[i];
 	}	
+
 	std::cin >> n;			//enter number to search
   	
 	//SEARCH
 	for(int i=0; i<size;i++){
+
 		if(n==arr[i]){
+
 			std::cout << i << '\n';
+
 			break;
 		}
 	}
 
 }
-

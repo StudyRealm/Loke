@@ -13,8 +13,8 @@ using std::cout;
 
 int tobase(int num, int base){
 	int ans=0;				//storing the reminder with correct int place
-	for(int i=0; num!=0 ;i++){
-		ans = ans +  (pow(10,i) * (num%base));
+	for(int idx=0; num!=0 ;idx++){
+		ans = ans +  (pow(10,idx) * (num%base));
 		num /= base;
 	}
 	return ans;

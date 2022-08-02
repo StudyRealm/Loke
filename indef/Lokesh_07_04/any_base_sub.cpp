@@ -19,17 +19,17 @@ using std::cout;
 int basesub(int num1, int num2, int base){
 	int dec=1, diff=0;
 
-	for(int i=0 ; (num1 > 0 || num2 > 0); i++){
+	for(int idx=0 ; (num1 > 0 || num2 > 0); idx++){
 			
 		int tempdiff =(num1%10) -  (num2%10);
 	   	
 		if(tempdiff <0){
-			diff += (tempdiff + base)*pow(10,i); // base will be added while carrying
+			diff += (tempdiff + base)*pow(10,idx); // base will be added while carrying
 			num1 = (num1/10) - 1;		     // subtracting 1 from num1 for carry
 			num2 /= 10;
 		
 		}else{
-			diff += (tempdiff)*pow(10,i);	
+			diff += (tempdiff)*pow(10,idx);	
 			num1 /= 10;
 			num2 /= 10;
 		}

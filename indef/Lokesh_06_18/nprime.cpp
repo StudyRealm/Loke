@@ -2,32 +2,30 @@
 
 int main()
 {	
-	int n;
-	std::cin >> n;
+	int num;
+	std::cin >> num;
 	
-	if (n<1)
+	if (num<1)
 		return 1;
 
-	else if (n == 2)
+	else if (num == 2)
 		std::cout << 2;
 	
 	else{
 		std::cout << 2 << '\n';
 
-		for (int i=3; i<n; i++)
+		for (int idx=3; idx<num; idx++)
 		{	
-
 			int temp=1;
-			for (int j=2; j<i; j++)
+			for (int jdx=2; jdx<idx; jdx++)
 			{
 
-				if(i%j ==0)
+				if(idx%jdx ==0)
 					temp=0;
 			}
-
 			if (temp)
 			{
-				std::cout << i << '\n';
+				std::cout << idx << '\n';
 			}
 		}
 	}

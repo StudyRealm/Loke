@@ -2,30 +2,30 @@
 
 int main()
 {
-	long long int f1=0,f2=1,n;
+	long long int num1=0,num2=1,num;
 	
-	std::cin >> n;
+	std::cin >> num;
 
-	if (n>40)
-		n=40;
+	if (num>40)
+		num=40;
 
 	// contraint 1 <= n <= 40
-	if (n==1)
-		std::cout << f1;
+	if (num==1)
+		std::cout << num1;
 
-	else if (n==2)
-		std::cout << f1 << " " << f2;
+	else if (num==2)
+		std::cout << num1 << " " << num2;
 
 	else{
-		std::cout << f1 << " " << f2 << " ";
+		std::cout << num1 << " " << num2 << " ";
 		
-		while(n-2) // n-2 as 0 and 1 will be printed outside the loop;
+		while(num-2) // n-2 as 0 and 1 will be printed outside the loop;
 		{
-			int temp = f1 + f2;
-			f1 = f2;
-			f2 = temp;
-			std::cout << f2 << " ";
-			n--;
+			int temp = num1 + num2;
+			num1 = num2;
+			num2 = temp;
+			std::cout << num2 << " ";
+			num--;
 		}
 	}
 	std::cout << '\n';
